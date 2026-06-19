@@ -7,7 +7,7 @@ const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 // 画面が開いたときと、3秒ごとにメッセージを読み込む関数
 async function loadMessages() {
     const { data, error } = await supabase
-        .from('投稿')
+        .from('posts')
         .select('*')
         .order('id', { ascending: true });
 
@@ -32,7 +32,7 @@ async function sendMessage() {
     if (!content) return alert('メッセージを入力してね！');
 
     const { error } = await supabase
-        .from('投稿')
+        .from('posts')
         .insert([{ username, content }]);
 
     if (error) {
