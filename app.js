@@ -17,7 +17,7 @@ async function loadMessages() {
     container.innerHTML = '';
     data.forEach(msg => {
         const div = document.createElement('div');
-        div.className = 'msg';
+        div.className = 'msg.username';
         div.innerHTML = `<strong>${escapeHtml(msg.username)}</strong>: ${escapeHtml(msg.content)}`;
         container.appendChild(div);
     });
@@ -33,7 +33,7 @@ async function sendMessage() {
 
     const { error } = await supabase
         .from('posts')
-        .insert([{ username, content }]);
+        .insert([{ username, content, content }]);
 
     if (error) {
         alert('送信に失敗しちゃいました...');
