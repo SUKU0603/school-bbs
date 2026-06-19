@@ -33,7 +33,7 @@ async function sendMessage() {
 
     const { error } = await supabase
         .from('posts')
-        .insert([{ username, content, content }]);
+        .insert([{ username, content }]);
 
     if (error) {
         alert('送信に失敗しちゃいました...');
