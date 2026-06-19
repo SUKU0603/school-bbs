@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xx掲示板xX</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 20px auto; padding: 10px; background: #f0f2f5; }
+        h2 { color: #333; text-align: center; }
+        #messages { border: 1px solid #ccc; background: white; padding: 10px; height: 350px; overflow-y: scroll; margin-bottom: 10px; border-radius: 8px; }
+        .msg { border-bottom: 1px solid #eee; padding: 8px 0; }
+        .msg strong { color: #007bff; }
+        input, textarea, button { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { background: #007bff; color: white; font-weight: bold; cursor: pointer; border: none; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h2>みんなの掲示板 🚀</h2>
+    <div id="messages"></div>
+    
+    <input type="text" id="username" placeholder="名前（ニックネーム）">
+    <textarea id="content" placeholder="メッセージを入力してね..."></textarea>
+    <button onclick="sendMessage()">送信する</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>
