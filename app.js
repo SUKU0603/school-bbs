@@ -1,6 +1,6 @@
 // 【重要】あとでここにデータを保存する場所（Supabase）のURLとキーを貼るよ！
-const SUPABASE_URL = 'https://xxxxxxxxxxxxxxxxxxxx.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...';
+const SUPABASE_URL = 'https://gmwjrxoxxlxhrfygrejb.supabase.co/';
+const SUPABASE_KEY = 'sb_publishable_I5S43C0y3Fdv1j-irV2x7w_x5cJYAO9';
 
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
